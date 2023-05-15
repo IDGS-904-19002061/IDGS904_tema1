@@ -1,0 +1,36 @@
+﻿@model IDGS904_tema1.Models.Distancia
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container">
+    <form action="/Distancia/Result" method="post">
+        <div class="form-control">
+            <div class="mb-3">
+                <label for="x1" class="form-label">X 1</label>
+                <input type="text" class="form-control" id="x1" name="x1">
+            </div>
+            <div class="mb-3">
+                <label for="y1" class="form-label">Y 1</label>
+                <input type="text" class="form-control" id="y1" name="y1">
+            </div>
+            <div class="mb-3">
+                <label for="x2" class="form-label">X 2</label>
+                <input type="text" class="form-control" id="x2" name="x2">
+            </div>
+            <div class="mb-3">
+                <label for="y2" class="form-label">Y 2</label>
+                <input type="text" class="form-control" id="y2" name="y2">
+            </div>
+
+            <input type="submit" class="btn btn-primary" value="Calcular" />
+        </div>
+    </form>
+</div>
+
+
+
+<div class="container">
+    <h1>El resultado es @Html.DisplayFor(model => Model.distancia)</h1>
+</div>

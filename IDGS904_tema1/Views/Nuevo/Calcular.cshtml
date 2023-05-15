@@ -1,0 +1,52 @@
+﻿@model IDGS904_tema1.Models.OperasBas
+
+@{
+    ViewBag.Title = "Caaaalcular";
+}
+
+<div class="container">
+    <form action="/" method="post">
+        <div class="form-control">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Opera" id="sumar" value="0">
+                <label class="form-check-label" for="sumar">
+                    Sumar
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Opera" id="restar" value="1">
+                <label class="form-check-label" for="restar">
+                    Restar
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Opera" id="dividir" value="2">
+                <label class="form-check-label" for="dividir">
+                    Dividir
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Opera" id="multiplicar" value="3">
+                <label class="form-check-label" for="multiplicar">
+                    Multiplicar
+                </label>
+            </div>
+            <div class="mb-3">
+                <label for="num1" class="form-label">Num1</label>
+                <input type="text" class="form-control" id="num1" name="Num1">
+            </div>
+            <div class="mb-3">
+                <label for="num2" class="form-label">Num2</label>
+                <input type="text" class="form-control" id="num2" name="Num2">
+            </div>
+
+            <input type="submit" class="btn btn-primary" value="Calcular" />
+        </div>
+    </form>
+</div>
+
+
+
+<div class="container">
+    <h1>El resultado es @Html.DisplayFor(model => Model.Res)</h1>     
+</div>

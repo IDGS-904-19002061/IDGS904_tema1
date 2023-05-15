@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "Index2";
+}
+
+<h2>Index2</h2>
+
+<h2>@ViewBag.Grupo</h2>
+<h2>@ViewData["Materia"]</h2>
+<h2>@ViewBag.Nombre</h2>
+
+@Html.ActionLink("Mi ruta", "Index", "Home", null, new { dato = "", @class = "btn btn-primary" })
+
+@Html.ActionLink("Calcular", "Calcular", "Nuevo", null, new { dato = "", @class = "btn btn-primary" })

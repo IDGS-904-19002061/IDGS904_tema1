@@ -1,0 +1,23 @@
+﻿@model IDGS904_tema1.Models.OperasBas
+
+@{
+    ViewBag.Title = "Calcular";
+}
+
+<div class="container">
+    <div class="row dropdown-divider col-lg-6">
+        <form action="\" method="post">
+            <input type="text" name="Opera" />
+            <input type="radio" name="Opera" />
+            <input type="radio" name="Opera" />
+            <input type="radio" name="Opera" />
+            <input placeholder="Num1" type="radio" name="num1" />
+            <input placeholder="Num2" type="text" name="num2" />
+            <input type="submit" value="Calcular" />
+        </form>
+    </div>
+
+    <div class="row dropdown-divider col-lg-6">
+        <h1>El resultado es @Html.DisplayFor(model => Model.Res)</h1>
+    </div>
+</div>
