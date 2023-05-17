@@ -124,9 +124,12 @@
     <Compile Include="Controllers\EscuelaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NuevoController.cs" />
+    <Compile Include="Controllers\TiendaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Alumnos.cs" />
+    <Compile Include="Models\Temperatura.cs" />
     <Compile Include="Models\Distancia.cs" />
     <Compile Include="Models\OperasBas.cs" />
     <Compile Include="Models\Productos.cs" />
@@ -196,6 +199,12 @@
     <Content Include="Views\Escuela\Index2.cshtml" />
     <Content Include="Views\Distancia\Index.cshtml" />
     <Content Include="Views\Distancia\Result.cshtml" />
+    <Content Include="Views\Tienda\Index.cshtml" />
+    <Content Include="Views\Tienda\DisplayTemplates\Boolean.cshtml" />
+    <Content Include="Views\Tienda\DisplayTemplates\DateTime.cshtml" />
+    <Content Include="Views\Tienda\EditorTemplates\DateTime.cshtml" />
+    <Content Include="Views\Tienda\Registrar.cshtml" />
+    <Content Include="Views\Tienda\Temperatura.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

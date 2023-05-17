@@ -11,7 +11,7 @@ namespace IDGS904_tema1.Models
         public int x2 { get; set; }
         public int y1 { get; set; }
         public int y2 { get; set; }
-        public double distancia { get; set; }
+        public double distancia { get; set; } 
 
         public double Calcular()
         {
