@@ -25,10 +25,13 @@ namespace IDGS904_tema1.Models
             {
                 obj.triangle = false;
             }
-            else
+            else if (obj.y1 == obj.y2 && obj.x2 == obj.y3)
+            {
+                obj.triangle = false;
+            }else
             {
                 obj.triangle = true;
-                obj.kindTriangle = "Irregular";
+                obj.kindTriangle = "Escaleno";
 
                 double dP1P2 = 0;
                 double dP1P3 = 0;
@@ -38,9 +41,9 @@ namespace IDGS904_tema1.Models
                 dP1P3 = Math.Sqrt(((Math.Pow(obj.x3 - obj.x1, 2)) + (Math.Pow(obj.y3 - obj.y1, 2))));
                 dP2P3 = Math.Sqrt(((Math.Pow(obj.x3 - obj.x2, 2)) + (Math.Pow(obj.y3 - obj.y2, 2))));
 
-                dP1P2 = Math.Round(dP1P2);
-                dP1P3 = Math.Round(dP1P3);
-                dP2P3 = Math.Round(dP2P3);
+                dP1P2 = Math.Round(dP1P2, 2);
+                dP1P3 = Math.Round(dP1P3, 2);
+                dP2P3 = Math.Round(dP2P3, 2);
 
                 List<double> list = new List<double>();
                 list.Add(dP1P2);
@@ -76,12 +79,12 @@ namespace IDGS904_tema1.Models
                     obj.area = (b * h) / 2;
 
                 }
-                if (Math.Pow(list[0], 2) + Math.Pow(list[1], 2) == Math.Pow(list[2], 2))
-                {
-                    obj.kindTriangle = "Rectangulo";
-                    obj.area = (list[0] * list[1])/2;
+                //if (Math.Pow(list[0], 2) + Math.Pow(list[1], 2) == Math.Pow(list[2], 2))
+                //{
+                //    obj.kindTriangle = "Rectangulo";
+                //    obj.area = (list[0] * list[1])/2;
 
-                }
+                //}
                 if (dP1P2 == dP2P3 && dP2P3 == dP1P3)
                 {
                     double h = 0;
@@ -89,15 +92,15 @@ namespace IDGS904_tema1.Models
                     h = (Math.Sqrt(3) * dP1P2) / 2;
                     obj.area = (dP1P2 * h) / 2;
                 }
+                if(obj.kindTriangle == "Escaleno")
+                {
+                    double sp = (list[0] + list[1] + list[2])/2;
+                    obj.area = Math.Pow(sp * (sp - list[0]) * (sp - list[1]) *(sp - list[2]), 0.5);
+                }
             }
 
             return obj;
         }
-
-
-
-
-
 
 
     }
